@@ -16,7 +16,7 @@ function App() {
         </div>
         <div className="w-1/2 flex justify-center items-center">
           <img
-            src="/src/assets/image.png"
+            src="https://i.ibb.co/HTMFmLW/image-61.png"
             alt="Peppermint Robot"
             className="w-[620px] h-[500px]" 
           />
