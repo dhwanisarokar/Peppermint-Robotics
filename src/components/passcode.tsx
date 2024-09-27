@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Tab from "./tab";
 import NumberPad from "./number-pad";
 
+const ADMIN_PASSCODE = import.meta.env.VITE_ADMIN_PASSCODE || "123456";
+const OPERATOR_PASSCODE = import.meta.env.VITE_OPERATOR_PASSCODE || "654321";
+
 const Passcode = () => {
   const [selectedTab, setSelectedTab] = useState<"Admin" | "Operator">("Admin");
   const [passcode, setPasscode] = useState<string>("");
@@ -20,13 +23,13 @@ const Passcode = () => {
   useEffect(() => {
     setTimeout(() => {
       if (selectedTab === "Admin" && passcode.length === 6) {
-        if (passcode === "123456") {
+        if (passcode === ADMIN_PASSCODE) {
           alert(`Welcome Admin`);
         } else alert("Wrong passcode");
 
         setPasscode("");
       } else if (selectedTab === "Operator" && passcode.length === 6) {
-        if (passcode === "456789") {
+        if (passcode === OPERATOR_PASSCODE) {
           alert(`Welcome Operator`);
         } else alert("Wrong passcode");
 
@@ -69,7 +72,10 @@ const Passcode = () => {
         </div>
       </div>
 
-      <NumberPad handleNumPadClick={handleNumPadClick} handleClearBtn={handleClearBtn}/>
+      <NumberPad
+        handleNumPadClick={handleNumPadClick}
+        handleClearBtn={handleClearBtn}
+      />
     </div>
   );
 };
