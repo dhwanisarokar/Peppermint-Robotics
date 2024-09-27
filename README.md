@@ -26,7 +26,7 @@ This project uses environment variables for secure passcode storage. Before runn
 # .env
 VITE_ADMIN_PASSCODE=your_admin_passcode
 VITE_OPERATOR_PASSCODE=your_operator_passcode
-
+```
 Replace your_admin_passcode and your_operator_passcode with your desired 6-digit passcodes.
 
 ## How to Run the Project
