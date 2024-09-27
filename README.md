@@ -9,6 +9,7 @@ This project implements a user interface for a hypothetical operating system cal
 1. Admin/Operator tab selection
 2. Passcode entry system with numpad
 3. TypeScript implementation for improved type safety
+4. I have hard coded password instead of saving in .env file because vite doesn't use NodeJS
 
 ## Technologies Used
 
@@ -16,6 +17,17 @@ This project implements a user interface for a hypothetical operating system cal
 - TypeScript
 - Tailwind CSS for styling
 - Lucide React for icons
+
+## Environment Setup
+
+This project uses environment variables for secure passcode storage. Before running the project, create a .env file in the root directory with the following content:
+
+```env
+# .env
+VITE_ADMIN_PASSCODE=your_admin_passcode
+VITE_OPERATOR_PASSCODE=your_operator_passcode
+
+Replace your_admin_passcode and your_operator_passcode with your desired 6-digit passcodes.
 
 ## How to Run the Project
 
