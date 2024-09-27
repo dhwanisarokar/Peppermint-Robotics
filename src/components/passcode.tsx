@@ -41,8 +41,8 @@ const Passcode = () => {
   }, [selectedTab]);
 
   return (
-    <div className="p-6 flex flex-col items-center gap-4 text-3xl">
-      <div className="mb-6 flex justify-evenly">
+    <div className="p-6 flex flex-col items-center justify-center gap-4 text-2xl">
+      <div className="mb-6 flex">
         <Tab
           isSelected={selectedTab === "Admin"}
           label="Admin"
@@ -61,8 +61,8 @@ const Passcode = () => {
           {[...new Array(6)].map((_, i) => (
             <div
               key={i}
-              className={`w-6 h-6 rounded-full ${
-                i < passcode.length ? "bg-teal-400" : "bg-gray-600"
+              className={`w-6 h-6 rounded-full border-2 border-[#345455] ${
+                i < passcode.length ? "bg-teal-400" : ""
               }`}
             />
           ))}
